@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 let isConnected = false;
 export async function connectDB() {
-  const uri = process.env.MONGODB_URI || 'mongodb://localhost:27017/serin';
+  const uri = process.env.MONGODB_URI;
   
   if (!process.env.MONGODB_URI) {
     console.log('⚠️ MONGODB_URI not defined in environment. Attempting connection to local MongoDB: mongodb://localhost:27017/serin');

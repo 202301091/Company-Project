@@ -5,7 +5,7 @@ import { getIsConnected } from './src/config/db.js';
 const app = express();
 // Middleware setup
 app.use(cors({
-  origin: '*', // For demo workspace. Customize for production if needed.
+  origin: process.env.CORS_ORIGIN || 'http://localhost:3000',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
